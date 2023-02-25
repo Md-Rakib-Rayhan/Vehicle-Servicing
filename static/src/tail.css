@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+
+#heroimg {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+.animate-left {
+    transform: translateX(-10%);
+  }
+
+@tailwind utilities;

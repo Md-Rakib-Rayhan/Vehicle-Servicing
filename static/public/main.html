@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Servicing Home Page</title>
+    <!-- Include Tailwind CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css"> -->
+    <link rel="stylesheet" href="tail.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    
+    <nav class="bg-slate-700 shadow-lg fixed w-full z-20">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div>
+                    <a href="#home" onclick="smoothScroll(event)" class="text-2xl font-bold text-white">AutoGo</a>
+                </div>
+                <div class="flex md:hidden">
+                    <button type="button" id="nav" >
+                        <div class="w-5 h-1 bg-white"></div>
+                        <div class="w-5 h-1 my-1 bg-white"></div>
+                        <div class="w-5 h-1 bg-white"></div>
+                    </button>
+                </div>
+                <div class="hidden md:flex md:items-center">
+                    <a href="#howitwork" onclick="smoothScroll(event)" class="text-gray-200 font-semibold hover:text-white px-4">How It Work</a>
+                    <a href="#aboutus" onclick="smoothScroll(event)" class="text-gray-200 font-semibold hover:text-white px-4">About Us</a>
+                    <a href="#services" onclick="smoothScroll(event)" class="text-gray-200 font-semibold hover:text-white px-4">Services</a>
+                    <a href="#" class="bg-red-500 text-white font-semibold hover:bg-red-600 py-2 px-4 rounded">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div id="shownav" class="hidden absolute right-0 shadow-slate-800 drop-shadow-lg md:hidden">
+            <div class="mx-auto p-8 bg-slate-700 ">
+                <div class="px-16">
+                    <div class="mt-1">
+                        <a href="#" class="block text-center text-gray-200 font-semibold hover:text-white py-3">How It Work</a>
+                        <a href="#" class="block text-center text-gray-200 font-semibold hover:text-white py-3">Services</a>
+                        <a href="#" class="block text-center text-gray-200 font-semibold hover:text-white py-3">About Us</a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="block border-red-500 border-2 text-red-500 font-semibold hover:text-red-600 py-2 px-4">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <!-- Hero section -->
+    <section id="home" class="bg-gray-800 py-6 h-screen overflow-hidden md:h-screen md:grid items-center content-center">
+        <!-- <video class="absolute z-0 w-full h-full object-cover" autoplay loop muted>
+            <source src="./video/animated.mp4" type="video/mp4">
+        </video> relative z-10 --> 
+        <div class="absolute z-0 w-full h-full">
+            <img src="./img/hero/bg.jpg" alt="Car" class="w-full h-full object-cover opacity-20">
+        </div>  
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <div class="md:hidden">
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <h2 class="text-4xl text-gray-50 font-bold mb-4 leading-normal"><span class="text-red-500 text-5xl md:text-7xl">Top-Notch</span><br> Car Maintenance Solutions</h2>
+                    <p class="mb-6 text-gray-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum, nibh vel pharetra dapibus, est nisi facilisis diam, a auctor odio justo sed est. Morbi tincidunt ligula at orci varius pulvinar.</p>
+                    <button class="px-4 py-2 rounded-lg bg-red-500 text-white font-semibold">Email Us</button>
+                    <button class="px-4 py-2 ml-2 rounded-lg bg-red-500 text-white font-semibold">Direct Call</button>
+                </div>
+                <div class="md:w-1/2">
+                    <img id="heroimg" src="./img/hero/a.png" alt="Car" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <!-- How it work section -->
+    <section id="howitwork" class="py-16">
+        <div class="container mx-auto ">
+            <h2 class="text-2xl font-bold text-center mb-4">How It Works</h2>
+            
+            <div class="text-center">
+                <button class="bg-gray-50 text-black font-semibold rounded-t border-red-500 border-x-2 border-t-2 py-2 px-4 mr-2">We Can Come to You</button>
+                <button class="bg-red-500 text-white font-semibold rounded-t hover:bg-red-600 py-2 px-4">You Can Come to Us</button>
+            </div>
+            <div class="bg-gray-50 pt-8 px-4 rounded  border-gray-300 border-x-4">
+                <div class="flex flex-wrap -mx-4">
+                    <div class="md:w-1/3 px-4 mb-8">
+                        <div class="bg-white border-red-200 border-x-4 rounded-lg shadow-lg p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-2xl">1</div>
+                                <h3 class="text-xl font-bold ml-4">Book Online</h3>
+                            </div>
+                            <p class="text-gray-700 leading-loose">Get a quote, book an appointment, speak to a specialist &ndash; all online!.</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 px-4 mb-8">
+                        <div class="bg-white border-red-200 border-x-4 rounded-lg shadow-lg p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-2xl">2</div>
+                                <h3 class="text-xl font-bold ml-4">We come to you</h3>
+                            </div>
+                            <p class="text-gray-700 leading-loose">Our mechanics come to you with all the tools and parts needed for your service.</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 px-4 mb-8">
+                        <div class="bg-white border-red-200 border-x-4 rounded-lg shadow-lg p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-2xl">3</div>
+                                <h3 class="text-xl font-bold ml-4">Get on with your day</h3>
+                            </div>
+                            <p class="text-gray-700 leading-loose">A fist bump for the coolest repair experience ever… and that&rsquo;s it!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services section -->
+    <section id="services" class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Service card 1 -->
+                <div class="bg-gray-100 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Oil Change</h3>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum, nibh vel pharetra dapibus, est nisi facilisis diam.</p>
+                    <button class="px-4 py-2 rounded-lg bg-gray-900 text-white font-semibold">Book Now</button>
+                </div>
+                <!-- Service card 2 -->
+                <div class="bg-gray-100 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Brake Service</h3>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum, nibh vel pharetra dapibus, est nisi facilisis diam.</p>
+                    <button class="px-4 py-2 rounded-lg bg-gray-900 text-white font-semibold">Book Now</button>
+                </div>
+                <!-- Service card 3 -->
+                <div class="bg-gray-100 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Tire Change</h3>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum, nibh vel pharetra dapibus, est nisi facilisis diam.</p>
+                    <button class="px-4 py-2 rounded-lg bg-gray-900 text-white font-semibold">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <!-- payment section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8">Easy Payment Options</h2>
+            <div class="flex flex-wrap -mx-4">
+                <div class="md:w-1/2 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-8 h-full">
+                        <h3 class="text-xl font-bold mb-4">Credit Card Payments</h3>
+                        <p class="text-gray-700 leading-loose mb-4">We accept all major credit cards for payment. Simply provide your card information during checkout to complete your payment securely.</p>
+                        <img src="https://tailwindui.com/img/logos/visa-gray-600.svg" alt="Visa" class="h-8 mr-2">
+                        <img src="https://tailwindui.com/img/logos/mastercard-gray-600.svg" alt="Mastercard" class="h-8">
+                    </div>
+                </div>
+                <div class="md:w-1/2 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-8 h-full">
+                        <h3 class="text-xl font-bold mb-4">PayPal Payments</h3>
+                        <p class="text-gray-700 leading-loose mb-4">If you prefer to pay with PayPal, you can select this option during checkout. Simply log in to your PayPal account and follow the prompts to complete your payment.</p>
+                        <img src="https://tailwindui.com/img/logos/paypal-gray-600.svg" alt="PayPal" class="h-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- About section -->
+    <section id="aboutus" class="bg-gray-100">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-wrap -mx-4">
+                <div class="md:w-1/2 px-4">
+                    <h2 class="text-2xl font-bold mb-4">About Us</h2>
+                    <p class="text-gray-700 leading-loose mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non maximus erat, et bibendum leo. Integer euismod ipsum et ligula vehicula, non commodo velit varius. Nam bibendum, eros id lobortis volutpat, enim lorem lobortis justo, vitae fringilla neque odio nec mi. Duis euismod ligula ut fermentum elementum.</p>
+                    <p class="text-gray-700 leading-loose mb-6">Nunc scelerisque sit amet odio sed euismod. Nullam dictum, sem at eleifend molestie, purus sapien volutpat turpis, a congue felis dolor id massa. Maecenas viverra risus nec mauris commodo, vel scelerisque ante consectetur. Nam posuere velit eu velit suscipit commodo.</p>
+                    <a href="#" class="text-red-500 font-bold hover:text-red-700">Learn More &rarr;</a>
+                </div>
+                <div class="md:w-1/2 px-4">
+                    <img src="./img/about-us.gif" alt="About" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    
+
+    <!-- Call to action section -->
+    <section class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="md:flex items-center justify-between">
+                <h2 class="text-3xl font-bold mb-4 md:mb-0">Book Your Service Today</h2>
+                <button class="px-4 py-2 rounded-lg bg-white text-gray-900 font-semibold mt-4 md:mt-0">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Footer section -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between">
+            <p>&copy; 2023 Car Servicing. All rights reserved.</p>
+            <p>Made with <span class="text-red-500">&hearts;</span> by Your Name</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
