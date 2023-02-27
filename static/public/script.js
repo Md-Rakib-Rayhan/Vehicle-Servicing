@@ -36,7 +36,6 @@ function changeImage() {
         heroImg.classList.remove('animate-left');
       }, 500);
   
-    // heroImg.src = imgCollection[imageIndex];
 
   }
 setInterval(changeImage, 3000);
