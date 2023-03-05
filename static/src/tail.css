@@ -74,4 +74,25 @@
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.24);
 }
+
+
+.bg-img0{
+  background-image: url('../public/img/oil-change.jpg');
+  width: 100%;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.bg-img1{
+  background-image: url('../public/img/brake-service.jpg');
+  width: 100%;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.bg-img2{
+  background-image: url('../public/img/tire-change.jpg');
+  width: 100%;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
 @tailwind utilities;

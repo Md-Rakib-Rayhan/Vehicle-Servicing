@@ -627,6 +627,27 @@ video {
   border: 1px solid rgba(255, 255, 255, 0.24);
 }
 
+.bg-img0{
+  background-image: url('../public/img/oil-change.jpg');
+  width: 100%;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.bg-img1{
+  background-image: url('../public/img/brake-service.jpg');
+  width: 100%;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.bg-img2{
+  background-image: url('../public/img/tire-change.jpg');
+  width: 100%;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
 .fixed {
   position: fixed;
 }
@@ -709,6 +730,11 @@ video {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .mb-16 {
@@ -1039,6 +1065,11 @@ video {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
+.bg-sky-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 105 161 / var(--tw-bg-opacity));
+}
+
 .bg-slate-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
@@ -1151,6 +1182,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1242,6 +1278,11 @@ video {
 .text-blue-400 {
   --tw-text-opacity: 1;
   color: rgb(96 165 250 / var(--tw-text-opacity));
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .text-gray-100 {
@@ -1512,6 +1553,11 @@ video {
 
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .md\:text-left {
