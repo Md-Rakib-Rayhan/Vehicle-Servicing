@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tail.css">
+    <title>About Us</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    
+    <nav class="bg-slate-700 shadow-lg fixed w-full z-20">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div>
+                    <a href="main.html" onclick="smoothScroll(event)" class="text-2xl font-bold text-white">AutoGo</a>
+                </div>
+                <div class="flex md:hidden">
+                    <button type="button" id="nav" >
+                        <div class="w-5 h-1 bg-white"></div>
+                        <div class="w-5 h-1 my-1 bg-white"></div>
+                        <div class="w-5 h-1 bg-white"></div>
+                    </button>
+                </div>
+                <div class="hidden md:flex md:items-center">
+                    <a href="#howitwork" onclick="smoothScroll(event)" class="text-gray-200 font-semibold hover:text-white px-4">How It Work</a>
+                    <a href="#aboutus" onclick="smoothScroll(event)" class="text-gray-200 font-semibold hover:text-white px-4">About Us</a>
+                    <a href="services.html" class="text-gray-200 font-semibold hover:text-white px-4">Services</a>
+                    <a href="sing_up.html" class="bg-red-500 text-white font-semibold hover:bg-red-600 py-2 px-4 rounded">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div id="shownav" class="hidden absolute right-0 shadow-slate-800 drop-shadow-lg md:hidden">
+            <div class="mx-auto p-8 bg-slate-700 ">
+                <div class="px-16">
+                    <div class="mt-1">
+                        <a href="#" class="block text-center text-gray-200 font-semibold hover:text-white py-3">How It Work</a>
+                        <a href="#" class="block text-center text-gray-200 font-semibold hover:text-white py-3">Services</a>
+                        <a href="#" class="block text-center text-gray-200 font-semibold hover:text-white py-3">About Us</a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="block border-red-500 border-2 text-red-500 font-semibold hover:text-red-600 py-2 px-4">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- about us -->
+    <div class="bg-gray-100 pt-32 pb-10">
+        <div class="max-w-full my-auto mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex flex-col justify-center">
+              <h2 class="text-4xl font-bold mb-6">About Us</h2>
+              <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus nunc ac dolor pretium porta. Integer non ipsum eget arcu commodo egestas. Curabitur pharetra sapien sed tristique laoreet.</p>
+              <p class="mb-8">Vestibulum ut mauris et lacus dictum consectetur. Aliquam auctor ipsum neque, vel commodo nibh laoreet eu. Donec vitae eros sapien. Etiam feugiat ac velit sit amet tristique.</p>
+              <div class="flex items-center mb-8">
+                <div class="grid w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400 mx-auto my-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-medium mb-2">Our Mission</h3>
+                  <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus nunc ac dolor pretium porta. Integer non ipsum eget arcu commodo egestas. Curabitur pharetra sapien sed tristique laoreet.</p>
+                </div>
+              </div>
+              <div class="flex items-center mb-8">
+                <div class="grid w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400 mx-auto my-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-medium mb-2">Our Values</h3>
+                  <p class="text-gray-600">Vestibulum ut mauris et lacus dictum consectetur. Aliquam auctor ipsum neque, vel commodo nibh laoreet eu. Donec vitae eros sapien. Etiam feugiat ac velit sit amet tristique.</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="grid w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400 mx-auto my-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-medium mb-2">Our Vision</h3>
+                  <p class="text-gray-600">Vestibulum ut mauris et lacus dictum consectetur. Aliquam auctor ipsum neque, vel commodo nibh laoreet eu. Donec vitae eros sapien. Etiam feugiat ac velit sit amet tristique.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src="https://source.unsplash.com/random/600x750" alt="About Us Image" class="w-full object-cover object-center rounded-lg shadow-lg">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+</body>
+</html>

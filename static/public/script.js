@@ -38,7 +38,7 @@ function changeImage() {
   
 
   }
-setInterval(changeImage, 3000);
+// setInterval(changeImage, 3000);
 
 
 
@@ -53,3 +53,26 @@ function smoothScroll(event) {
   });
 }
 
+
+//Animation on Scroll
+
+let observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) =>{
+    console.log(entry)
+    if (entry.isIntersecting){
+      entry.target.classList.add('show');
+    }else{
+      entry.target.classList.remove('show');
+    }
+  })
+});
+
+let hiddenElements = document.querySelectorAll('.hiddenAni');
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+let hiddenRight = document.querySelectorAll('.hiddenRight');
+hiddenRight.forEach((el) => observer.observe(el));
+
+let hiddenUp = document.querySelectorAll('.hiddenUp');
+hiddenUp.forEach((el) => observer.observe(el));

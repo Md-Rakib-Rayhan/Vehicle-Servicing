@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it Works - XYZ Auto Repair</title>
+    <link rel="stylesheet" href="tail.css">
+    <style>
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        .slide-in-from-left {
+            animation: slideInFromLeft 0.5s ease-out;
+        }
+        .slide-in-from-right {
+            animation: slideInFromRight 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation bar section -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="font-bold text-xl">XYZ Auto Repair</a>
+            <ul class="flex">
+                <li class="ml-4"><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li class="ml-4"><a href="#" class="hover:text-gray-300">Services</a></li>
+                <li class="ml-4"><a href="#" class="hover:text-gray-300">About</a></li>
+                <li class="ml-4"><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header section -->
+    <header class="bg-white py-16">
+        <div class="container mx-auto flex justify-center items-center px-4">
+            <h1 class="text-4xl font-bold text-gray-800 text-center">How It Works</h1>
+        </div>
+    </header>
+
+    <!-- Booking options section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <!-- Option 1: Book from Home -->
+                <div class="bg-white rounded-lg shadow-md p-8 mb-8 md:mb-0 md:w-1/2 md:mr-4 flex flex-col items-center justify-center slide-in-from-left">
+                    <h2 class="font-bold text-2xl mb-4 text-gray-800 text-center">Option 1: Book from Home</h2>
+                    <img src="https://dummyimage.com/600x400/000/fff" alt="Car on a lift" class="w-full h-auto mb-6">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Book your appointment online, and we'll come to your home or workplace to pick up your car for service.</p>
+                    <a href="#" class="bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 ease-in-out">Book Now</a>
+                </div>
+    
+                <!-- Option 2: Come to Our Service Center -->
+                <div class="bg-white rounded-lg shadow-md p-8 md:w-1/2 md:ml-4 flex flex-col items-center justify-center slide-in-from-right">
+                    <h2 class="font-bold text-2xl mb-4 text-gray-800 text-center">Option 2: Come to Our Service Center</h2>
+                    <img src="https://dummyimage.com/600x400/000/fff" alt="Mechanic working on a car" class="w-full h-auto mb-6">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Bring your car to our service center and we'll take care of everything for you.</p>
+                    <a href="#" class="bg-gray-800 text-white py-2 px-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 ease-in-out">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <p class="text-center">&copy; 2023 XYZ Auto Repair. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Animate elements on scroll
+        const slideInFromLeft = document.querySelectorAll('.slide-in-from-left');
+        const slideInFromRight = document.querySelectorAll('.slide-in-from-right');
+    
+        const options = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -50px 0px'
+        };
+    
+        const observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__slideInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+    
+        slideInFromLeft.forEach(element => {
+            observer.observe(element);
+        });
+    
+        slideInFromRight.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>    
