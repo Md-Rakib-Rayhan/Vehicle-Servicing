@@ -83,7 +83,7 @@
     <!-- Local Curency Logos -->
     <section class="bg-slate-100 hidden md:block">
         <div class="container mx-auto px-4 h-28 flex justify-between items-center">
-            <div class="text-red-500 hidden lg:block">
+            <div class="text-blue-500 hidden lg:block">
                 <h2 class="text-2xl font-bold">Support Local Transiction</h2>
                 <p class="text-gray-700 text-sm">Enjoy Your Services without any problem</p>
             </div>
@@ -240,13 +240,15 @@
         <div class="container mx-auto px-4 py-16">
             <div class="flex flex-wrap -mx-4">
                 <div class="md:w-1/2 px-4">
-                    <h2 class="text-2xl font-bold mb-4">About Us</h2>
-                    <p class="text-gray-700 leading-loose mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non maximus erat, et bibendum leo. Integer euismod ipsum et ligula vehicula, non commodo velit varius. Nam bibendum, eros id lobortis volutpat, enim lorem lobortis justo, vitae fringilla neque odio nec mi. Duis euismod ligula ut fermentum elementum.</p>
-                    <p class="text-gray-700 leading-loose mb-6">Nunc scelerisque sit amet odio sed euismod. Nullam dictum, sem at eleifend molestie, purus sapien volutpat turpis, a congue felis dolor id massa. Maecenas viverra risus nec mauris commodo, vel scelerisque ante consectetur. Nam posuere velit eu velit suscipit commodo.</p>
-                    <a href="#" class="text-red-500 font-bold hover:text-red-700">Learn More &rarr;</a>
+                    <h2 class="text-3xl text-blue-500 font-bold mb-4">About Us</h2>
+                    <div class="md:border-l md:border-blue-300 md:pl-6">
+                        <p class="text-gray-700 leading-loose mb-6 hiddenAni">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non maximus erat, et bibendum leo. Integer euismod ipsum et ligula vehicula, non commodo velit varius. Nam bibendum, eros id lobortis volutpat, enim lorem lobortis justo, vitae fringilla neque odio nec mi. Duis euismod ligula ut fermentum elementum.</p>
+                        <p class="text-gray-700 leading-loose mb-6 hiddenAni">Nunc scelerisque sit amet odio sed euismod. Nullam dictum, sem at eleifend molestie, purus sapien volutpat turpis, a congue felis dolor id massa. Maecenas viverra risus nec mauris commodo, vel scelerisque ante consectetur. Nam posuere velit eu velit suscipit commodo.</p>
+                    </div>
+                    <a href="#" class="text-blue-500 font-bold hover:text-blue-700">Learn More &rarr;</a>
                 </div>
                 <div class="md:w-1/2 px-4">
-                    <img src="./img/about-us.gif" alt="About" class="w-full h-auto rounded-lg shadow-lg">
+                    <div class="hiddenUp" id="animation-container"></div>
                 </div>
             </div>
         </div>
@@ -262,40 +264,79 @@
 
 
     <!-- Customer review -->
-    <div class="flex justify-end">
-        <button class="text-yellow-500 focus:outline-none mr-2">&lt;</button>
-        <button class="text-yellow-500 focus:outline-none">&gt;</button>
-      </div>
+
 
     <section>
-        <div class="container flex px-4 mx-auto" >
-        <div class="w-full md:w-1/2 p-6 flex flex-col justify-between h-full">
-            <div class="p-4">
-              <h2 class="text-2xl font-semibold mb-4">Customer Reviews</h2>
-              <div>
-              <div class="flex items-center mb-4">
-                <img src="./img/Bessler-Auto-Parts-Image-Map-Transparent-Vehicle.png" alt="Customer 1" class="w-12 h-12 rounded-full mr-4">
-                <div>
-                  <p class="font-semibold text-gray-800">Jane Doe</p>
-                  <p class="text-gray-500">Business Owner</p>
-                </div>
-              </div>
-              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae erat vel lacus pharetra commodo eu eu dolor. Nullam nec dui in sapien auctor commodo quis nec magna.</p>
-              <div class="flex items-center">
-                <span class="text-yellow-500 mr-2">&#9733;</span>
-                <span class="text-yellow-500 mr-2">&#9733;</span>
-                <span class="text-yellow-500 mr-2">&#9733;</span>
-                <span class="text-yellow-500 mr-2">&#9734;</span>
-                <span class="text-yellow-500 mr-2">&#9734;</span>
-                <span class="text-gray-500">(4/5)</span>
-              </div>
+        <div class="container flex px-4 py-16 mx-auto" >
+         <div class="relative w-full bg-blue-500 md:w-1/2 flex justify-between h-full">
+
+            <button class="absolute top-1/2 text-3xl font-extrabold -left-4 bg-blue-600 w-10 h-10 border-2 border-gray-100  rounded-full grid content-end text-white opacity-10 hover:opacity-90">&lt;</button>
+            <button class="absolute top-1/2 text-3xl font-extrabold -right-4 bg-blue-600 w-10 h-10 border-2 border-gray-100  rounded-full grid content-end text-white opacity-10 hover:opacity-90">&gt;</button>
+
+            <div class="flex overflow-hidden max-w-full">
+                <div class="bg-gray-200 lg:w-60 rounded-lg h-80 p-8 mr-8 flex flex-col justify-center">
+                    <div class="flex items-center mb-4">
+                      <img src="./img/man.jpg" alt="Customer 1" class="w-12 h-12 object-cover border-2 border-blue-500 rounded-full mr-4">
+                      <div>
+                        <p class="font-semibold text-gray-800">Jane Doe</p>
+                        <p class="text-gray-500">Business Owner</p>
+                      </div>
+                    </div>
+                    <p class="review mb-4 h-2/3 overflow-hidden">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet consectetur adipiscing elit. Sed vitae erat vel lacus pharetra commodo eu eu dolor. Nullam nec dui in sapien auctor commodo quis nec magna.</p>
+                    <div class="flex items-center">
+                      <span class="text-yellow-500 mr-2">&#9733;</span>
+                      <span class="text-yellow-500 mr-2">&#9733;</span>
+                      <span class="text-yellow-500 mr-2">&#9733;</span>
+                      <span class="text-yellow-500 mr-2">&#9734;</span>
+                      <span class="text-yellow-500 mr-2">&#9734;</span>
+                      <span class="text-gray-500">(4/5)</span>
+                    </div>
+                  </div>
+
+
+
+                <div class="bg-gray-200 lg:w-60 rounded-lg h-80 p-8 mr-8 flex flex-col justify-center">
+                    <div class="flex items-center mb-4">
+                      <img src="./img/man.jpg" alt="Customer 1" class="w-12 h-12 object-cover border-2 border-blue-500 rounded-full mr-4">
+                      <div>
+                        <p class="font-semibold text-gray-800">Jane Doe</p>
+                        <p class="text-gray-500">Business Owner</p>
+                      </div>
+                    </div>
+                    <p class="review mb-4 h-2/3 overflow-hidden">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet consectetur adipiscing elit. Sed vitae erat vel lacus pharetra commodo eu eu dolor. Nullam nec dui in sapien auctor commodo quis nec magna.</p>
+                    <div class="flex items-center">
+                      <span class="text-yellow-500 mr-2">&#9733;</span>
+                      <span class="text-yellow-500 mr-2">&#9733;</span>
+                      <span class="text-yellow-500 mr-2">&#9733;</span>
+                      <span class="text-yellow-500 mr-2">&#9734;</span>
+                      <span class="text-yellow-500 mr-2">&#9734;</span>
+                      <span class="text-gray-500">(4/5)</span>
+                    </div>
+                  </div>
+
+
+                <div class="bg-gray-200 lg:w-60 rounded-lg h-80 p-8 mr-8 flex flex-col justify-center">
+                    <div class="flex items-center mb-4">
+                      <img src="./img/man.jpg" alt="Customer 1" class="w-12 h-12 object-cover border-2 border-blue-500 rounded-full mr-4">
+                      <div>
+                        <p class="font-semibold text-gray-800">Jane Doe</p>
+                        <p class="text-gray-500">Business Owner</p>
+                      </div>
+                    </div>
+                    <p class="review mb-4 h-2/3 overflow-hidden">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet consectetur adipiscing elit. Sed vitae erat vel lacus pharetra commodo eu eu dolor. Nullam nec dui in sapien auctor commodo quis nec magna.</p>
+                    <div class="flex items-center">
+                      <span class="text-yellow-500 mr-2">&#9733;</span>
+                      <span class="text-yellow-500 mr-2">&#9733;</span>
+                      <span class="text-yellow-500 mr-2">&#9733;</span>
+                      <span class="text-yellow-500 mr-2">&#9734;</span>
+                      <span class="text-yellow-500 mr-2">&#9734;</span>
+                      <span class="text-gray-500">(4/5)</span>
+                    </div>
+                  </div>
+                  
+                  
             </div>
-            </div>
-            <div class="p-4 bg-gray-200 flex justify-between">
-              <button class="px-4 py-2 bg-white text-gray-800 font-semibold rounded-full hover:bg-gray-300 transition duration-300">Prev</button>
-              <button class="px-4 py-2 bg-white text-gray-800 font-semibold rounded-full hover:bg-gray-300 transition duration-300">Next</button>
-            </div>
-          </div>
+         </div>
 
           <div class="w-full md:w-1/2 p-6">
             <h2 class="text-2xl font-bold mb-4">What Our Users Say About Us</h2>
@@ -335,7 +376,9 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
 

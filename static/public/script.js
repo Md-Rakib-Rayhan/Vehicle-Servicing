@@ -58,7 +58,7 @@ function smoothScroll(event) {
 
 let observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) =>{
-    console.log(entry)
+    // console.log(entry)
     if (entry.isIntersecting){
       entry.target.classList.add('show');
     }else{
@@ -76,3 +76,36 @@ hiddenRight.forEach((el) => observer.observe(el));
 
 let hiddenUp = document.querySelectorAll('.hiddenUp');
 hiddenUp.forEach((el) => observer.observe(el));
+
+
+
+//  Lottie animation
+// Load the animation JSON file
+const animation = bodymovin.loadAnimation({
+  container: document.getElementById('animation-container'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: './anime-json/about-us.json' // Replace with the path to your JSON file
+});
+
+
+// review ~~~~~~
+const paragraphs = document.querySelectorAll('.review');
+
+paragraphs.forEach(paragraph => {
+  // Check if the text content of the <p> element is longer than 118 characters
+  if (paragraph.textContent.length > 118) {
+    // Create a new <a> element
+    const aElement = document.createElement('a');
+    aElement.href = '#';
+    aElement.textContent = '...';
+      
+    // Trim the text content to 197 characters and add three dots at the end
+    const shortenedText = paragraph.textContent.substring(0, 118);
+        
+    // Update the text content of the <p> element with the shortened text
+    paragraph.textContent = shortenedText;
+    paragraph.appendChild(aElement);
+  }
+});

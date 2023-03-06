@@ -1,19 +1,8 @@
 @tailwind base;
 @tailwind components;
 
-#heroimg {
-    transition: transform 0.5s ease-in-out;
-  }
-.animate-left {
-    transform: translateX(-10%);
-  }
 
-/* .bg-lite-blue{
-  background-color: #2897c5;
-}
-.bg-dark-blue{
-  background-color: #065170;
-} */
+/* Css For scrolling Animation ~~~~~~~~~~~~~~~~~*/
 
 /* animation */
 /* .hiddenAni{
@@ -24,7 +13,6 @@
 .show {
   opacity: 1;
 } */
-
 
 .hiddenAni{
   opacity: 0;
@@ -54,6 +42,25 @@
     transition: none;
   }
 } */
+
+
+
+
+
+/* Home Page /////////////////////////////////////// */
+
+/* Hero Section ~~~~~~~~~~~~~~~~~~~ */
+#heroimg {
+    transition: transform 0.5s ease-in-out;
+  }
+.animate-left {
+    transform: translateX(-10%);
+  }
+
+
+
+/* How it Work ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 .img-0{
   transition-delay: 200ms;
 }
@@ -65,6 +72,7 @@
 }
 
 
+/* Payment Section ~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #glus{
   background: rgba(255, 255, 255, 0.14);
@@ -76,6 +84,7 @@
 }
 
 
+/* Our Services ~~~~~~~~~~~~~~~~~~~~~~~~*/
 .bg-img0{
   background-image: url('../public/img/oil-change.jpg');
   width: 100%;
@@ -94,5 +103,11 @@
   background-size: cover;
   background-blend-mode: overlay;
 }
+
+/* about us ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#animation-container{
+  transition-delay: 800ms;
+}
+
 
 @tailwind utilities;
